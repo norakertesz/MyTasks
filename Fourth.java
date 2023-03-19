@@ -1,20 +1,35 @@
+import java.util.Scanner;
+
 public class Fourth {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Scanner scanner2 = new Scanner(System.in);
+        // Wrong username or password. Please try again.
+        //Maximum number of attempts reached. End program.
 
-
-
+        String p = "password123";
+        String u = "username123";
+        int counter = 0;
+        do {
+            System.out.println("Enter your username:");
+            String username = scanner.next(); //user123
+            username = username.toLowerCase();
+            System.out.println("Enter your password:");
+            String password = scanner2.next();//password123
+            password = password.toLowerCase();
+            counter++;
+            if (!(password.equals(p)) && !(username.equals(u)) && counter != 3) {
+                System.out.println("Wrong username or password. Please try again.");
+                continue;}
+                if (counter == 3) {
+                    System.out.println("Maximum number of attempts reached. End program.");
+                }else{
+                    System.out.println("OK");
+                    break;
+                }
+            } while (counter != 3);
 
 
     }
+
 }
-/*Schreiben Sie ein Java-Programm, das den Benutzer auffordert, einen Benutzernamen
-und ein Kennwort einzugeben. Das Programm sollte den Benutzer wiederholt zur
-Eingabe eines Benutzernamens und eines Passworts aufzufordern, bis ein korrekter
-Benutzername und ein korrektes Passwort eingegeben werden oder die maximale
-Anzahl der Versuche erreicht ist.
-Der richtige Benutzername ist "user123" und das richtige Passwort ist "password123".
-Wenn der Benutzer falsche Anmeldedaten eingibt, sollte das Programm die Meldung
-"Falscher Benutzername oder falsches Passwort. Bitte versuchen Sie es erneut." Wenn
-die maximale Anzahl von Versuchen erreicht ist, sollte das Programm die Meldung
-"Maximale Anzahl von Versuchen erreicht. Programm beenden." und das Programm
-beenden. */
