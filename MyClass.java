@@ -9,9 +9,10 @@ public class MyClass {
        h1.hatErGebellt();
         System.out.println(h1.name+" ist mein Hund. Er ist ein " + h1.farbe+" "+h1.rasse+", und "+h1.alter+" Jahre alt.");
         System.out.println(h1.hatErGebellt());
-        System.out.println(h1.stock());
-//-------------------------------------------------
 
+//-------------------------------------------------
+        System.out.println(h1.stock());
+        h1.seinStock();
     }
 
 
